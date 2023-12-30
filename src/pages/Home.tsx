@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
-import './App.css';
-import { useGetRandomPokemon } from './hooks/useGetRandomPokemon';
-import pokeball from './images/pokeball.gif'
+import '../App.css';
+import { useGetRandomPokemon } from '../hooks/useGetRandomPokemon';
+import pokeball from '../images/pokeball.gif'
 import Button from 'react-bootstrap/Button';
 
 function App() {
