@@ -3,6 +3,7 @@ import '../App.css';
 import { useGetRandomPokemon } from '../hooks/useGetRandomPokemon';
 import pokeball from '../images/pokeball.gif'
 import Button from 'react-bootstrap/Button';
+import Header from '../components/Header';
 
 function App() {
 
@@ -16,7 +17,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1 id='header-text'>Pokedex</h1>
+        <Header />
         <div className={pokemon?.name ? 'pokemon-box' : ''}>
           {!loading && pokemon?.name && <h1>{pokemon.name}</h1>}
           {!loading && pokemon?.sprites && <img src={pokemon.sprites?.front_default} alt='pokemon' height={200} width={200}/>}

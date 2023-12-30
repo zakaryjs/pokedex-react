@@ -1,8 +1,13 @@
+import Header from "../components/Header";
 
 
 export default function Region () {
 
     return (
-        <h1>Region</h1>
+    <div className="App">
+      <header className="App-header">
+        <Header />
+      </header>
+    </div>
     )
 }
