@@ -25,6 +25,9 @@ function App() {
         </div>
         {loading && <img src={pokeball} alt='pokeball' height={100} width={100}/>}
         {!loading && <Button variant='danger' onClick={() => {getPokemon()}}>Get New Random Pokemon</Button>}
+        <div className='pokemon-box'>
+          <h2>Curious to learn more about your fabourite Pokemon? Want to sharpen your Pokemon knowledge? This is the perfect place!</h2>
+        </div>
       </header>
     </div>
   );
