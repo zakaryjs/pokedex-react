@@ -10,6 +10,7 @@ import Region from './pages/Region';
 import Search from './pages/Search';
 import Favourites from './pages/Favourites';
 import Settings from './pages/Settings';
+import Kanto from './pages/regions/Kanto';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -24,6 +25,7 @@ root.render(
         <Route path='/search' element={<Search />} />
         <Route path='/favourites' element={<Favourites />} />
         <Route path='/settings' element={<Settings />} />
+        <Route path='/region/kanto' element={<Kanto />} />
       </Routes>
       <Navbar />
     </BrowserRouter>
