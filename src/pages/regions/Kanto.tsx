@@ -3,7 +3,7 @@ import { usePokedexFetch } from "../../hooks/usePokedexFetch"
 
 export default function Kanto() {
 
-    let { getPokedexPokemon, pokemonData } = usePokedexFetch(150, 0)
+    let { getPokedexPokemon, pokemonData } = usePokedexFetch(151, 0)
 
     useEffect(() => {
         getPokedexPokemon()
@@ -12,18 +12,18 @@ export default function Kanto() {
 
     return (
         <div className="App">
-            <header className="App-header">
+            <header className="App-header-grid">
                 <h1>Kanto</h1>
                 <img src="https://archives.bulbagarden.net/media/upload/thumb/2/25/LGPE_Kanto_Map.png/320px-LGPE_Kanto_Map.png" alt="map" />
-            </header>
-            <div>
+                <div className="pokemon-grid margin-top">
                 {pokemonData?.map(pokemon => (
-                    <div>
-                        <h1>{pokemon.name}</h1>
-                        <img src={pokemon.image} alt="pokemon" />
+                    <div className="poke">
+                        <h4>{pokemon.name}</h4>
+                        <img src={pokemon.image} className="button-margin" alt="pokemon" />
                     </div>
                 ))}
             </div>
+            </header>
     </div>
     )
 }

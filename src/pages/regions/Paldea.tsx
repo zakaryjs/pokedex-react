@@ -12,18 +12,18 @@ export default function Paldea() {
 
     return (
         <div className="App">
-        <header className="App-header">
+            <header className="App-header-grid">
             <h1>Paldea</h1>
             <img src="https://archives.bulbagarden.net/media/upload/thumb/f/fd/Paldea_artwork.png/320px-Paldea_artwork.png" alt="map" />
-        </header>
-        <div>
-            {pokemonData?.map(pokemon => (
-                <div>
-                    <h1>{pokemon.name}</h1>
-                    <img src={pokemon.image} alt="pokemon" />
-                </div>
-            ))}
-        </div>
-</div>
+                <div className="pokemon-grid margin-top">
+                {pokemonData?.map(pokemon => (
+                    <div className="poke">
+                        <h4>{pokemon.name}</h4>
+                        <img src={pokemon.image} className="button-margin" alt="pokemon" />
+                    </div>
+                ))}
+            </div>
+            </header>
+    </div>
     )
 }
