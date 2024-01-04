@@ -1,11 +1,19 @@
 import { useEffect } from "react"
 import { usePokedexFetch } from "../../hooks/usePokedexFetch"
 
-export default function Galar() {
+interface region {
+    limit: number,
+    offset: number,
+    name: string,
+    link: string
+}
 
-    let { getPokedexPokemon, pokemonData } = usePokedexFetch(96, 809)
+export default function RegionPage(props: region) {
+
+    let { getPokedexPokemon, pokemonData } = usePokedexFetch(props.limit, props.offset)
 
     useEffect(() => {
+        console.log(props)
         getPokedexPokemon()
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
@@ -13,11 +21,11 @@ export default function Galar() {
     return (
         <div className="App">
             <header className="App-header-grid">
-                <h1>Galar</h1>
-                <img src="https://archives.bulbagarden.net/media/upload/thumb/c/ce/Galar_artwork.png/170px-Galar_artwork.png" alt="map" />
+                <h1>{props.name}</h1>
+                <img src={props.link} alt="map" />
                 <div className="pokemon-grid margin-top">
                 {pokemonData?.map(pokemon => (
-                    <div className="poke">
+                    <div key={pokemon.name} className="poke">
                         <h4>{pokemon.name}</h4>
                         <img src={pokemon.image} className="button-margin" alt="pokemon" />
                     </div>
