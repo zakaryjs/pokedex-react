@@ -11,6 +11,14 @@ import Search from './pages/Search';
 import Favourites from './pages/Favourites';
 import Settings from './pages/Settings';
 import Kanto from './pages/regions/Kanto';
+import Johto from './pages/regions/Johto';
+import Hoenn from './pages/regions/Hoenn';
+import Sinnoh from './pages/regions/Sinnoh';
+import Unova from './pages/regions/Unova';
+import Kalos from './pages/regions/Kalos';
+import Alola from './pages/regions/Alola';
+import Galar from './pages/regions/Galar';
+import Paldea from './pages/regions/Paldea';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -26,6 +34,14 @@ root.render(
         <Route path='/favourites' element={<Favourites />} />
         <Route path='/settings' element={<Settings />} />
         <Route path='/region/kanto' element={<Kanto />} />
+        <Route path='/region/johto' element={<Johto />} />
+        <Route path='/region/hoenn' element={<Hoenn />} />
+        <Route path='/region/sinnoh' element={<Sinnoh />} />
+        <Route path='/region/unova' element={<Unova />} />
+        <Route path='/region/kalos' element={<Kalos />} />
+        <Route path='/region/alola' element={<Alola />} />
+        <Route path='/region/galar' element={<Galar />} />
+        <Route path='/region/paldea' element={<Paldea />} />
       </Routes>
       <Navbar />
     </BrowserRouter>
