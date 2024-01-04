@@ -12,18 +12,18 @@ export default function Sinnoh() {
 
     return (
         <div className="App">
-        <header className="App-header">
+        <header className="App-header-grid">
             <h1>Sinnoh</h1>
             <img src="https://archives.bulbagarden.net/media/upload/thumb/0/08/Sinnoh_BDSP_artwork.png/320px-Sinnoh_BDSP_artwork.png" alt="map" />
-        </header>
-        <div>
+            <div className="pokemon-grid margin-top">
             {pokemonData?.map(pokemon => (
-                <div>
-                    <h1>{pokemon.name}</h1>
+                <div className="poke">
+                    <h4>{pokemon.name}</h4>
                     <img src={pokemon.image} alt="pokemon" />
                 </div>
             ))}
         </div>
+        </header>
 </div>
     )
 }

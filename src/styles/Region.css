@@ -1,3 +1,29 @@
 .button-margin {
     margin-bottom: 1rem;
 }
+
+.margin-top {
+    margin-top: 1rem;
+}
+
+.pokemon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+}
+
+.poke {
+    border: 1px white solid;
+}
+
+.image {
+    border: 1px white solid;
+}
+
+@media screen and (min-width: 600px) {
+    .pokemon-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        margin-left: -14rem;
+        margin-right: -14rem;
+    }
+}

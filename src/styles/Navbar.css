@@ -17,4 +17,8 @@ li {
 
 .centred {
     text-align: center;
+    overflow: hidden;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
 }
