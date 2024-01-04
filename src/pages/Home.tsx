@@ -29,7 +29,7 @@ function App() {
         </div>
         {!loading && <Button variant='danger' onClick={() => {getPokemon()}}>Get New Random Pokemon</Button>}
         <div>
-          <h2 className='text-margin'>Curious to learn more about your fabourite Pokemon? Want to sharpen your Pokemon knowledge? This is the perfect place!</h2>
+          <h2 className='text-margin'>Curious to learn more about your favourite Pokemon? Want to sharpen your Pokemon knowledge? This is the perfect place!</h2>
         </div>
       </header>
     </div>
