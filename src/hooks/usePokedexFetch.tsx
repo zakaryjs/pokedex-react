@@ -18,6 +18,7 @@ export function usePokedexFetch(limit: number, offset: number) {
 
     const [pokemon, setPokemon] = useState<pokemonResponse>()
     const [pokemonData, setPokemonData] = useState<singlePokemonData[]>([])
+    const [loading, setLoading] = useState<boolean>(true)
 
     async function getPokedexPokemon() {
         let response = await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=${limit}&offset=${offset}`)
@@ -38,6 +39,7 @@ export function usePokedexFetch(limit: number, offset: number) {
                 all.push(obj)
             }
             setPokemonData(all)
+            setLoading(false)
         }
     } 
 
@@ -46,5 +48,5 @@ export function usePokedexFetch(limit: number, offset: number) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [pokemon])
 
-    return { pokemon, getPokedexPokemon, pokemonData }
+    return { pokemon, getPokedexPokemon, pokemonData, loading }
 }
