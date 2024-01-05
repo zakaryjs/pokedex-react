@@ -11,6 +11,7 @@ import Search from './pages/Search';
 import Favourites from './pages/Favourites';
 import Settings from './pages/Settings';
 import RegionPage from './pages/regions/RegionPage';
+import Pokemon from './pages/Pokemon';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -33,6 +34,7 @@ root.render(
         <Route path='/region/alola' element={<RegionPage name="Alola" limit={88} offset={721} link="https://archives.bulbagarden.net/media/upload/thumb/0/0b/Alola_USUM_artwork.png/320px-Alola_USUM_artwork.png" />} />
         <Route path='/region/galar' element={<RegionPage name="Galar" limit={96} offset={809} link="https://archives.bulbagarden.net/media/upload/thumb/c/ce/Galar_artwork.png/170px-Galar_artwork.png" />} />
         <Route path='/region/paldea' element={<RegionPage name="Paldea" limit={120} offset={905} link="https://archives.bulbagarden.net/media/upload/thumb/f/fd/Paldea_artwork.png/320px-Paldea_artwork.png" />} />
+        <Route path='/pokemon/:name' element={<Pokemon />} />
       </Routes>
       <Navbar />
     </BrowserRouter>
