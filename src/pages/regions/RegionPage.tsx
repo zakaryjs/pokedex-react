@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import { usePokedexFetch } from "../../hooks/usePokedexFetch"
 import pokeball from '../../images/pokeball.gif'
+import { useNavigate } from "react-router-dom"
 
 interface region {
     limit: number,
@@ -12,6 +13,7 @@ interface region {
 export default function RegionPage(props: region) {
 
     let { getPokedexPokemon, pokemonData, loading } = usePokedexFetch(props.limit, props.offset)
+    const navigate = useNavigate()
 
     useEffect(() => {
         getPokedexPokemon()
@@ -26,7 +28,7 @@ export default function RegionPage(props: region) {
                 {!loading && <img src={props.link} alt="map" />}
                 <div className="pokemon-grid margin-top">
                 {pokemonData?.map(pokemon => (
-                    <div key={pokemon.name} className="poke">
+                    <div onClick={() => {navigate(`/pokemon/${pokemon.name}`)}} key={pokemon.name} className="poke">
                         <h4>{pokemon.name}</h4>
                         <img src={pokemon.image} className="button-margin" alt="pokemon" />
                     </div>
