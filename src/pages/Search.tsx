@@ -1,6 +1,6 @@
 import { SyntheticEvent, useState } from "react"
 import { useNavigate } from "react-router-dom"
-
+import '../styles/Search.css'
 
 export default function Search () {
 

@@ -1,14 +1,14 @@
 .styledSelected {
     font-weight: bold;
     text-decoration: none;
-    margin: 1rem;
-    color: black;
+    margin: 0.9rem;
+    color: white;
 }
 
 .styled {
     text-decoration: none;
-    margin: 1rem;
-    color: black;
+    margin: 0.9rem;
+    color: white;
 }
 
 li {
@@ -21,4 +21,9 @@ li {
     position: sticky;
     bottom: 0;
     width: 100%;
+    background-color: black;
+}
+
+html {
+    background-color: black;
 }
