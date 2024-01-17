@@ -1,13 +1,13 @@
+* {
+  font-family: 'Sora', sans-serif;
+}
+
 .App {
   text-align: center;
 }
 
-* {
-  background-color: #282c34;
-}
-
 .App-header {
-  background-color: #282c34;
+  background-color: #000000;
   min-height: 97vh;
   display: flex;
   flex-direction: column;
@@ -17,7 +17,7 @@
 }
 
 .App-header-grid {
-  background-color: #282c34;
+  background-color: #000000;
   min-height: 100vh;
   align-items: center;
   justify-content: center;
@@ -32,6 +32,9 @@
   margin-right: 6rem;
   border: 3px white solid;
   border-radius: 5px;
+  background-image: url(https://i.pinimg.com/originals/df/4e/8b/df4e8ba28f912bf9cdf9fa0dfc196411.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #header-text {
