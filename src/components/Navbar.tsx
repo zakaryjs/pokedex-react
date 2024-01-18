@@ -3,7 +3,7 @@ import '../styles/Navbar.css'
 
 export default function Navbar () {
     return (
-        <div className="centred">
+        <div className="centred App">
             <NavLink to="/" className={({isActive}) => isActive ? 'styledSelected' : 'styled'}>Home</NavLink>
             <NavLink to="/region" className={({isActive}) => isActive ? 'styledSelected' : 'styled'}>Region</NavLink>
             <NavLink to="/search" className={({isActive}) => isActive ? 'styledSelected' : 'styled'}>S</NavLink>

@@ -7,6 +7,7 @@ export function useFetchPokemon () {
     const [pokemon, setPokemon] = useState<PokeAPI.Pokemon>()
     const [type1, setType1] = useState<String>()
     const [type2, setType2] = useState<String>()
+    const [loading, setLoading] = useState<boolean>(true)
 
     useEffect(() => {
         if (pokemon?.types[0]?.type?.name) {
@@ -26,8 +27,9 @@ export function useFetchPokemon () {
         let response = await fetch("https://pokeapi.co/api/v2/pokemon/" + lowerName)
         let data = await response.json()
         setPokemon(data)
+        setLoading(false)
     }
 
-    return { pokemon, getPokemon, type1, type2 }
+    return { pokemon, getPokemon, type1, type2, loading }
 
 }
