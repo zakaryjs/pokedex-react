@@ -48,12 +48,12 @@ export default function Pokemon() {
                 {type1 && !loading && <img className='type-margin' src={`https://raw.githubusercontent.com/msikma/pokesprite/master/misc/types/go/${type1}.png`} alt='type badge'/>}
                 {type2 && !loading && <img className='type-margin' src={`https://raw.githubusercontent.com/msikma/pokesprite/master/misc/types/go/${type2}.png`} alt='type badge'/>}
                 {!loading && <h2><b><u>Abilities</u></b></h2>}
-                {!loading && <h3>{pokemon?.abilities[0].ability.name}</h3>}
-                {!loading && <h3>{pokemon?.abilities[1]?.ability.name}</h3>}
+                {!loading && <h4>{pokemon?.abilities[0].ability.name}</h4>}
+                {!loading && <h4>{pokemon?.abilities[1]?.ability.name}</h4>}
                 {!loading && <h2><b><u>Base Stats</u></b></h2>}
                 {!loading && <div key={pokemon?.name}>
                 {pokemon?.stats.map(stat => (
-                    <h2>{stat.stat.name}: {stat.base_stat}</h2>
+                    <h4>{stat.stat.name}: {stat.base_stat}</h4>
                 ))}
                 </div>}
             </header>
